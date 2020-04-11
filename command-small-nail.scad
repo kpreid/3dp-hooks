@@ -1,4 +1,4 @@
-include <common.scad>
+include <lib-command.scad>
 
 head_diameter = 5.8;
 head_thickness = 2;
