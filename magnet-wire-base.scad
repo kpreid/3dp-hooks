@@ -1,12 +1,18 @@
 // A cup which, if printed in flexible filament, contains a magnet removably, and has holes through which bendable wire can be passed to make a custom magnet hook.
 
-// Fit parameters
-magnet_diameter = 18 * 1.015;  // Enlarged to allow for part shrinkage
+// Diameter of the magnet, mm
+magnet_diameter_nominal = 18;
+
+// Thickness of the magnet, mm
 magnet_thickness = 3;
+
+// Diameter of the holes for wire, mm
 wire_hole_diameter = 2.1;
 
-// Independent parameters
-bottom_plate_thickness = 0.6;  // three 0.2 mm layers
+// Thickness between the magnet and the surface, mm
+bottom_plate_thickness = 0.6;
+
+/* [Hidden] */
 top_taper_thickness = 0.4;
 magnet_to_wire_gap = 1;
 top_ring_thickness = 1;
@@ -14,6 +20,7 @@ side_wall_width = 2;
 outer_bevel = 0.4;
 epsilon = 0.01;
 
+magnet_diameter = magnet_diameter_nominal * 1.015;  // Enlarged to allow for part shrinkage -- but should probably be scaled differently ...
 top_elements_thickness = magnet_to_wire_gap + wire_hole_diameter + top_ring_thickness;
 body_height = bottom_plate_thickness + magnet_thickness + top_elements_thickness;
 
